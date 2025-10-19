@@ -1,0 +1,10 @@
+{
+  "id": "user-1",
+  "twitterUsername": "@JohnDoe",
+  "twitterId": "123456789",
+  "walletAddress": "0x742d35Cc6634C0532925a3b844Bc9e7595f9C4f",
+  "isVerified": true,
+  "balance": 12.5,
+  "createdAt": "2025-10-10T12:00:00Z"
+}
+

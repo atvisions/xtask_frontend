@@ -1,0 +1,91 @@
+[
+  {
+    "id": "claimed-1",
+    "taskId": "task-1",
+    "task": {
+      "title": "关注我们的 Twitter 账号",
+      "types": ["follow"],
+      "reward": 0.5
+    },
+    "status": "ongoing",
+    "claimedAt": "2025-10-18T10:00:00Z",
+    "expiresAt": "2025-10-19T10:00:00Z",
+    "proof": null,
+    "submittedAt": null,
+    "completedAt": null,
+    "failureReason": null
+  },
+  {
+    "id": "claimed-2",
+    "taskId": "task-2",
+    "task": {
+      "title": "点赞并转发我们的推文",
+      "types": ["like", "retweet"],
+      "reward": 0.8
+    },
+    "status": "verifying",
+    "claimedAt": "2025-10-17T14:00:00Z",
+    "expiresAt": "2025-10-18T14:00:00Z",
+    "proof": {
+      "screenshot": "/uploads/proof-screenshot-1.png",
+      "tweetLink": "https://twitter.com/JohnDoe/status/111111111"
+    },
+    "submittedAt": "2025-10-17T16:30:00Z",
+    "completedAt": null,
+    "failureReason": null
+  },
+  {
+    "id": "claimed-3",
+    "taskId": "task-3",
+    "task": {
+      "title": "评论并引用我们的推文",
+      "types": ["comment", "quote"],
+      "reward": 1.0
+    },
+    "status": "completed",
+    "claimedAt": "2025-10-16T09:00:00Z",
+    "expiresAt": "2025-10-17T09:00:00Z",
+    "proof": {
+      "screenshot": "/uploads/proof-screenshot-2.png",
+      "tweetLink": "https://twitter.com/JohnDoe/status/222222222"
+    },
+    "submittedAt": "2025-10-16T11:00:00Z",
+    "completedAt": "2025-10-16T15:00:00Z",
+    "failureReason": null
+  },
+  {
+    "id": "claimed-4",
+    "taskId": "task-4",
+    "task": {
+      "title": "关注并点赞我们的最新推文",
+      "types": ["follow", "like"],
+      "reward": 0.6
+    },
+    "status": "failed",
+    "claimedAt": "2025-10-15T10:00:00Z",
+    "expiresAt": "2025-10-16T10:00:00Z",
+    "proof": {
+      "screenshot": "/uploads/proof-screenshot-3.png"
+    },
+    "submittedAt": "2025-10-15T12:00:00Z",
+    "completedAt": null,
+    "failureReason": "未完成任务要求"
+  },
+  {
+    "id": "claimed-5",
+    "taskId": "task-5",
+    "task": {
+      "title": "转发并评论我们的活动推文",
+      "types": ["retweet", "comment"],
+      "reward": 1.2
+    },
+    "status": "expired",
+    "claimedAt": "2025-10-14T08:00:00Z",
+    "expiresAt": "2025-10-15T08:00:00Z",
+    "proof": null,
+    "submittedAt": null,
+    "completedAt": null,
+    "failureReason": "超过 24 小时未提交"
+  }
+]
+

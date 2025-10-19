@@ -1,0 +1,295 @@
+{
+  "common": {
+    "appName": "KOL.Network",
+    "slogan": "人人皆可成为KOL",
+    "connectWallet": "连接钱包",
+    "disconnect": "断开连接",
+    "loading": "加载中...",
+    "confirm": "确认",
+    "cancel": "取消",
+    "submit": "提交",
+    "close": "关闭",
+    "retry": "重试",
+    "viewDetails": "查看详情",
+    "back": "返回",
+    "next": "下一步",
+    "previous": "上一步",
+    "save": "保存",
+    "delete": "删除",
+    "edit": "编辑",
+    "search": "搜索",
+    "filter": "筛选",
+    "sort": "排序",
+    "all": "全部",
+    "success": "成功",
+    "error": "错误",
+    "warning": "警告",
+    "info": "信息",
+    "processing": "处理中..."
+  },
+  "nav": {
+    "home": "首页",
+    "taskHall": "任务大厅",
+    "myTasks": "我的任务",
+    "publishTask": "发布任务",
+    "profile": "个人中心"
+  },
+  "home": {
+    "hero": {
+      "title": "KOL.Network",
+      "subtitle": "通过完成社交媒体任务赚取奖励，或发布任务推广您的项目",
+      "badge": "人人皆可成为KOL",
+      "description": "连接任务发布者与执行者，通过智能合约管理资金和奖励分配",
+      "cta": "开始赚钱",
+      "learnMore": "了解更多"
+    },
+    "stats": {
+      "users": "注册用户",
+      "tasks": "完成任务",
+      "rewards": "累计奖励"
+    },
+    "features": {
+      "title": "平台特色",
+      "tasks": {
+        "title": "多样化任务",
+        "description": "关注、点赞、转发、评论、引用等多种Twitter任务类型，简单操作即可赚取USDT奖励"
+      },
+      "rewards": {
+        "title": "即时奖励",
+        "description": "任务完成验证后立即获得USDT奖励，资金由智能合约自动分配，安全透明"
+      },
+      "community": {
+        "title": "活跃社区",
+        "description": "加入全球KOL社区，与志同道合的创作者一起成长，共同推广优质项目"
+      },
+      "secure": {
+        "title": "安全可靠",
+        "description": "基于区块链智能合约，资金安全有保障，所有交易公开透明可追溯"
+      },
+      "simple": {
+        "title": "简单任务",
+        "description": "关注、点赞、转发等简单操作即可赚钱"
+      },
+      "instant": {
+        "title": "即时奖励",
+        "description": "任务完成验证后立即获得USDT奖励"
+      }
+    }
+  },
+  "auth": {
+    "login": "登录",
+    "signup": "注册",
+    "register": "注册",
+    "logout": "退出登录",
+    "loginRequired": "请先登录",
+    "step1": "步骤 1: Twitter 登录",
+    "step2": "步骤 2: 连接钱包",
+    "step3": "步骤 3: 支付验证费",
+    "step4": "步骤 4: 注册成功",
+    "twitterLogin": "使用 Twitter 登录",
+    "connectMetaMask": "连接 MetaMask",
+    "signMessage": "签名验证",
+    "payVerificationFee": "支付验证费",
+    "verificationFee": "验证费: 1 USDT",
+    "paymentInfo": "请向以下地址支付 1 USDT 完成验证",
+    "adminAddress": "管理员地址",
+    "payNow": "立即支付",
+    "waitingConfirmation": "等待确认中...",
+    "registrationSuccess": "注册成功！",
+    "startUsing": "开始使用",
+    "installMetaMask": "请先安装 MetaMask",
+    "downloadMetaMask": "下载 MetaMask",
+    "userRejected": "用户拒绝了操作",
+    "insufficientBalance": "余额不足",
+    "transactionFailed": "交易失败",
+    "wrongNetwork": "请切换到 BNB Chain"
+  },
+  "tasks": {
+    "title": "任务大厅",
+    "subtitle": "浏览并领取任务以赚取奖励",
+    "publishTask": "发布任务",
+    "noTasks": "暂无可用任务",
+    "noResults": "未找到任务",
+    "tryDifferentFilters": "尝试调整搜索或筛选条件",
+    "searchPlaceholder": "搜索任务...",
+    "category": "分类",
+    "sortBy": "排序",
+    "showingResults": "显示 {{count}} / {{total}} 个任务",
+    "loadMore": "加载更多",
+    "filter": {
+      "all": "全部"
+    },
+    "categories": {
+      "all": "全部任务"
+    },
+    "status": {
+      "active": "进行中",
+      "paused": "已暂停",
+      "completed": "已完成"
+    },
+    "sort": {
+      "latest": "最新发布",
+      "expiringSoon": "即将到期",
+      "rewardHigh": "奖励：从高到低",
+      "rewardLow": "奖励：从低到高"
+    },
+    "taskTypes": {
+      "follow": "关注",
+      "like": "点赞",
+      "retweet": "转发",
+      "comment": "评论",
+      "quote": "引用"
+    },
+    "reward": "奖励",
+    "progress": "进度",
+    "completed": "已完成",
+    "remaining": "剩余",
+    "claimTask": "领取任务",
+    "claimed": "已领取",
+    "taskFull": "名额已满",
+    "taskDetails": "任务详情",
+    "taskTitle": "任务标题",
+    "taskDescription": "任务描述",
+    "taskType": "任务类型",
+    "taskReward": "任务奖励",
+    "totalQuantity": "总数量",
+    "completedQuantity": "已完成数量",
+    "remainingQuantity": "剩余名额",
+    "publisher": "发布者",
+    "confirmClaim": "确认领取此任务？",
+    "claimSuccess": "领取成功！",
+    "claimFailed": "领取失败",
+    "alreadyClaimed": "您已领取过此任务",
+    "goToMyTasks": "查看我的任务",
+    "continueBrowsing": "继续浏览",
+    "expired": "已过期",
+    "hoursLeft": "小时后到期",
+    "daysLeft": "天后到期"
+  },
+  "publishTask": {
+    "title": "发布任务",
+    "subtitle": "创建您的任务并吸引 KOL 帮助推广",
+    "taskTitle": "任务标题",
+    "titlePlaceholder": "例如：关注我们的 Twitter 账号",
+    "taskDescription": "任务描述",
+    "descriptionPlaceholder": "详细描述任务要求，让参与者清楚了解需要完成什么...",
+    "taskTypes": "任务类型",
+    "rewardPerTask": "单个任务奖励 (USDT)",
+    "taskQuantity": "任务数量",
+    "characters": "字符",
+    "costSummary": "费用汇总",
+    "taskRewards": "任务奖励",
+    "platformFee": "平台手续费",
+    "totalCost": "总费用",
+    "publishAndPay": "发布任务并支付",
+    "confirmPublish": "确认发布任务",
+    "confirmAndPay": "确认并支付",
+    "paymentNotice": "点击确认后，将调用 MetaMask 钱包向智能合约支付总费用。任务将在确认收到款项后发布。",
+    "processingPayment": "正在处理支付...",
+    "publishSuccess": "任务发布成功！",
+    "publishFailed": "任务发布失败，请重试",
+    "validation": {
+      "titleRequired": "请输入任务标题",
+      "titleTooLong": "标题不能超过 200 字",
+      "descriptionRequired": "请输入任务描述",
+      "typeRequired": "请至少选择一个任务类型",
+      "rewardRequired": "请输入奖励金额",
+      "rewardMin": "奖励金额不能少于 0.1 USDT",
+      "quantityRequired": "请输入任务数量",
+      "quantityMin": "任务数量不能少于 1"
+    }
+  },
+  "myTasks": {
+    "title": "我的任务",
+    "claimedTasks": "我领取的任务",
+    "publishedTasks": "我发布的任务",
+    "noTasks": "暂无任务",
+    "noClaimedTasks": "还没有领取任何任务",
+    "noClaimedTasksDesc": "前往任务大厅浏览并领取感兴趣的任务，开始赚取奖励吧！",
+    "noPublishedTasks": "还没有发布任何任务",
+    "noPublishedTasksDesc": "发布您的第一个任务，让 KOL 们帮助您推广项目和内容！",
+    "noMatchingTasks": "没有找到匹配的任务",
+    "noMatchingTasksDesc": "尝试调整筛选条件或搜索关键词",
+    "browseTaskHall": "浏览任务大厅",
+    "status": {
+      "ongoing": "进行中",
+      "verifying": "验证中",
+      "completed": "已完成",
+      "failed": "验证失败",
+      "expired": "已过期"
+    },
+    "timeRemaining": "剩余时间",
+    "submitTask": "提交任务",
+    "submitProof": "提交任务凭证",
+    "uploadScreenshot": "上传截图",
+    "uploadPlaceholder": "点击上传或拖拽文件",
+    "supportedFormats": "支持: PNG, JPG, JPEG",
+    "or": "或",
+    "tweetLink": "推文链接",
+    "tweetLinkPlaceholder": "https://twitter.com/...",
+    "proofRequired": "至少需要提供一种凭证",
+    "submitSuccess": "提交成功！",
+    "submitFailed": "提交失败",
+    "uploadFailed": "上传失败",
+    "waitingVerification": "等待验证...",
+    "rewardReceived": "获得奖励",
+    "completedTime": "完成时间",
+    "rewardDistributed": "奖励已发放",
+    "failureReason": "失败原因",
+    "taskExpired": "任务已过期",
+    "notSubmittedIn24h": "超过 24 小时未提交",
+    "taskNotCompleted": "未完成任务要求",
+    "hours": "小时",
+    "minutes": "分钟",
+    "ago": "前"
+  },
+  "profile": {
+    "title": "个人中心",
+    "userInfo": "用户信息",
+    "twitterAccount": "Twitter 账号",
+    "walletAddress": "钱包地址",
+    "verificationStatus": "验证状态",
+    "verified": "已验证",
+    "notVerified": "未验证",
+    "balance": "可用余额",
+    "withdraw": "提现",
+    "withdrawHistory": "提现记录",
+    "withdrawTitle": "提现",
+    "availableBalance": "可用余额",
+    "withdrawAmount": "提现金额",
+    "withdrawAmountPlaceholder": "请输入提现金额",
+    "withdrawAddress": "提现地址",
+    "currentWallet": "当前钱包地址",
+    "confirmWithdraw": "确认提现",
+    "withdrawConfirm": "确认提现以下金额？",
+    "withdrawSuccess": "提现成功！",
+    "withdrawFailed": "提现失败",
+    "zeroBalance": "余额不足",
+    "withdrawHistoryTitle": "提现记录",
+    "noWithdrawHistory": "暂无提现记录",
+    "amount": "金额",
+    "status": "状态",
+    "time": "时间",
+    "txHash": "交易哈希",
+    "viewOnExplorer": "查看详情",
+    "withdrawStatus": {
+      "success": "成功",
+      "failed": "失败",
+      "pending": "进行中"
+    },
+    "validation": {
+      "amountRequired": "请输入提现金额",
+      "amountInvalid": "金额必须大于 0",
+      "amountExceed": "金额超出可用余额"
+    }
+  },
+  "errors": {
+    "networkError": "网络错误，请重试",
+    "serverError": "服务器错误",
+    "timeout": "请求超时",
+    "unknownError": "未知错误",
+    "loadFailed": "加载失败",
+    "operationFailed": "操作失败"
+  }
+}
+

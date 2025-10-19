@@ -1,0 +1,295 @@
+{
+  "common": {
+    "appName": "KOL.Network",
+    "slogan": "Everyone Can Be a KOL",
+    "connectWallet": "Connect Wallet",
+    "disconnect": "Disconnect",
+    "loading": "Loading...",
+    "confirm": "Confirm",
+    "cancel": "Cancel",
+    "submit": "Submit",
+    "close": "Close",
+    "retry": "Retry",
+    "viewDetails": "View Details",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "all": "All",
+    "success": "Success",
+    "error": "Error",
+    "warning": "Warning",
+    "info": "Info",
+    "processing": "Processing..."
+  },
+  "nav": {
+    "home": "Home",
+    "taskHall": "Task Hall",
+    "myTasks": "My Tasks",
+    "publishTask": "Publish Task",
+    "profile": "Profile"
+  },
+  "home": {
+    "hero": {
+      "title": "KOL.Network",
+      "subtitle": "Earn rewards by completing social media tasks, or publish tasks to promote your project",
+      "badge": "Everyone Can Be a KOL",
+      "description": "Connecting task publishers and executors, managing funds and reward distribution through smart contracts",
+      "cta": "Start Earning",
+      "learnMore": "Learn More"
+    },
+    "stats": {
+      "users": "Registered Users",
+      "tasks": "Completed Tasks",
+      "rewards": "Total Rewards"
+    },
+    "features": {
+      "title": "Platform Features",
+      "tasks": {
+        "title": "Diverse Tasks",
+        "description": "Multiple Twitter task types including follow, like, retweet, comment, and quote. Earn USDT rewards with simple actions"
+      },
+      "rewards": {
+        "title": "Instant Rewards",
+        "description": "Get USDT rewards immediately after task verification. Funds are automatically distributed by smart contracts, secure and transparent"
+      },
+      "community": {
+        "title": "Active Community",
+        "description": "Join the global KOL community, grow with like-minded creators, and promote quality projects together"
+      },
+      "secure": {
+        "title": "Secure & Reliable",
+        "description": "Built on blockchain smart contracts for guaranteed fund security. All transactions are publicly transparent and traceable"
+      },
+      "simple": {
+        "title": "Simple Tasks",
+        "description": "Earn money through simple actions like follow, like, and retweet"
+      },
+      "instant": {
+        "title": "Instant Rewards",
+        "description": "Receive USDT rewards immediately after task verification"
+      }
+    }
+  },
+  "auth": {
+    "login": "Log in",
+    "signup": "Sign up",
+    "register": "Register",
+    "logout": "Logout",
+    "loginRequired": "Please login first",
+    "step1": "Step 1: Twitter Login",
+    "step2": "Step 2: Connect Wallet",
+    "step3": "Step 3: Pay Verification Fee",
+    "step4": "Step 4: Registration Success",
+    "twitterLogin": "Login with Twitter",
+    "connectMetaMask": "Connect MetaMask",
+    "signMessage": "Sign Message",
+    "payVerificationFee": "Pay Verification Fee",
+    "verificationFee": "Verification Fee: 1 USDT",
+    "paymentInfo": "Please pay 1 USDT to the following address to complete verification",
+    "adminAddress": "Admin Address",
+    "payNow": "Pay Now",
+    "waitingConfirmation": "Waiting for confirmation...",
+    "registrationSuccess": "Registration Successful!",
+    "startUsing": "Start Using",
+    "installMetaMask": "Please install MetaMask first",
+    "downloadMetaMask": "Download MetaMask",
+    "userRejected": "User rejected the operation",
+    "insufficientBalance": "Insufficient balance",
+    "transactionFailed": "Transaction failed",
+    "wrongNetwork": "Please switch to BNB Chain"
+  },
+  "tasks": {
+    "title": "Task Hall",
+    "subtitle": "Browse and claim tasks to earn rewards",
+    "publishTask": "Publish Task",
+    "noTasks": "No tasks available",
+    "noResults": "No tasks found",
+    "tryDifferentFilters": "Try adjusting your search or filters",
+    "searchPlaceholder": "Search tasks...",
+    "category": "Category",
+    "sortBy": "Sort By",
+    "showingResults": "Showing {{count}} of {{total}} tasks",
+    "loadMore": "Load More",
+    "filter": {
+      "all": "All"
+    },
+    "categories": {
+      "all": "All Tasks"
+    },
+    "status": {
+      "active": "Active",
+      "paused": "Paused",
+      "completed": "Completed"
+    },
+    "sort": {
+      "latest": "Latest",
+      "expiringSoon": "Expiring Soon",
+      "rewardHigh": "Reward: High to Low",
+      "rewardLow": "Reward: Low to High"
+    },
+    "taskTypes": {
+      "follow": "Follow",
+      "like": "Like",
+      "retweet": "Retweet",
+      "comment": "Comment",
+      "quote": "Quote"
+    },
+    "reward": "Reward",
+    "progress": "Progress",
+    "completed": "Completed",
+    "remaining": "Remaining",
+    "claimTask": "Claim Task",
+    "claimed": "Claimed",
+    "taskFull": "Task Full",
+    "taskDetails": "Task Details",
+    "taskTitle": "Task Title",
+    "taskDescription": "Task Description",
+    "taskType": "Task Type",
+    "taskReward": "Task Reward",
+    "totalQuantity": "Total Quantity",
+    "completedQuantity": "Completed",
+    "remainingQuantity": "Remaining",
+    "publisher": "Publisher",
+    "confirmClaim": "Confirm to claim this task?",
+    "claimSuccess": "Claimed successfully!",
+    "claimFailed": "Claim failed",
+    "alreadyClaimed": "You have already claimed this task",
+    "goToMyTasks": "Go to My Tasks",
+    "continueBrowsing": "Continue Browsing",
+    "expired": "Expired",
+    "hoursLeft": "h left",
+    "daysLeft": "d left"
+  },
+  "publishTask": {
+    "title": "Publish Task",
+    "subtitle": "Create your task and attract KOLs to help promote",
+    "taskTitle": "Task Title",
+    "titlePlaceholder": "e.g., Follow our Twitter account",
+    "taskDescription": "Task Description",
+    "descriptionPlaceholder": "Describe the task requirements in detail so participants know what to do...",
+    "taskTypes": "Task Types",
+    "rewardPerTask": "Reward per Task (USDT)",
+    "taskQuantity": "Task Quantity",
+    "characters": "characters",
+    "costSummary": "Cost Summary",
+    "taskRewards": "Task Rewards",
+    "platformFee": "Platform Fee",
+    "totalCost": "Total Cost",
+    "publishAndPay": "Publish Task & Pay",
+    "confirmPublish": "Confirm Publish Task",
+    "confirmAndPay": "Confirm & Pay",
+    "paymentNotice": "After confirmation, MetaMask will be called to pay the total cost to the smart contract. The task will be published after payment is confirmed.",
+    "processingPayment": "Processing payment...",
+    "publishSuccess": "Task published successfully!",
+    "publishFailed": "Failed to publish task, please try again",
+    "validation": {
+      "titleRequired": "Please enter task title",
+      "titleTooLong": "Title cannot exceed 200 characters",
+      "descriptionRequired": "Please enter task description",
+      "typeRequired": "Please select at least one task type",
+      "rewardRequired": "Please enter reward amount",
+      "rewardMin": "Reward cannot be less than 0.1 USDT",
+      "quantityRequired": "Please enter task quantity",
+      "quantityMin": "Quantity cannot be less than 1"
+    }
+  },
+  "myTasks": {
+    "title": "My Tasks",
+    "claimedTasks": "Tasks I Claimed",
+    "publishedTasks": "Tasks I Published",
+    "noTasks": "No tasks",
+    "noClaimedTasks": "No claimed tasks yet",
+    "noClaimedTasksDesc": "Browse the task hall and claim tasks that interest you to start earning rewards!",
+    "noPublishedTasks": "No published tasks yet",
+    "noPublishedTasksDesc": "Publish your first task and let KOLs help promote your project and content!",
+    "noMatchingTasks": "No matching tasks found",
+    "noMatchingTasksDesc": "Try adjusting your filters or search keywords",
+    "browseTaskHall": "Browse Task Hall",
+    "status": {
+      "ongoing": "Ongoing",
+      "verifying": "Verifying",
+      "completed": "Completed",
+      "failed": "Failed",
+      "expired": "Expired"
+    },
+    "timeRemaining": "Time Remaining",
+    "submitTask": "Submit Task",
+    "submitProof": "Submit Task Proof",
+    "uploadScreenshot": "Upload Screenshot",
+    "uploadPlaceholder": "Click to upload or drag file",
+    "supportedFormats": "Supported: PNG, JPG, JPEG",
+    "or": "or",
+    "tweetLink": "Tweet Link",
+    "tweetLinkPlaceholder": "https://twitter.com/...",
+    "proofRequired": "At least one proof is required",
+    "submitSuccess": "Submitted successfully!",
+    "submitFailed": "Submit failed",
+    "uploadFailed": "Upload failed",
+    "waitingVerification": "Waiting for verification...",
+    "rewardReceived": "Reward Received",
+    "completedTime": "Completed Time",
+    "rewardDistributed": "Reward Distributed",
+    "failureReason": "Failure Reason",
+    "taskExpired": "Task Expired",
+    "notSubmittedIn24h": "Not submitted within 24 hours",
+    "taskNotCompleted": "Task requirements not met",
+    "hours": "hours",
+    "minutes": "minutes",
+    "ago": "ago"
+  },
+  "profile": {
+    "title": "Profile",
+    "userInfo": "User Information",
+    "twitterAccount": "Twitter Account",
+    "walletAddress": "Wallet Address",
+    "verificationStatus": "Verification Status",
+    "verified": "Verified",
+    "notVerified": "Not Verified",
+    "balance": "Available Balance",
+    "withdraw": "Withdraw",
+    "withdrawHistory": "Withdraw History",
+    "withdrawTitle": "Withdraw",
+    "availableBalance": "Available Balance",
+    "withdrawAmount": "Withdraw Amount",
+    "withdrawAmountPlaceholder": "Enter withdraw amount",
+    "withdrawAddress": "Withdraw Address",
+    "currentWallet": "Current wallet address",
+    "confirmWithdraw": "Confirm Withdraw",
+    "withdrawConfirm": "Confirm to withdraw the following amount?",
+    "withdrawSuccess": "Withdraw successful!",
+    "withdrawFailed": "Withdraw failed",
+    "zeroBalance": "Insufficient balance",
+    "withdrawHistoryTitle": "Withdraw History",
+    "noWithdrawHistory": "No withdraw history",
+    "amount": "Amount",
+    "status": "Status",
+    "time": "Time",
+    "txHash": "Transaction Hash",
+    "viewOnExplorer": "View Details",
+    "withdrawStatus": {
+      "success": "Success",
+      "failed": "Failed",
+      "pending": "Pending"
+    },
+    "validation": {
+      "amountRequired": "Please enter withdraw amount",
+      "amountInvalid": "Amount must be greater than 0",
+      "amountExceed": "Amount exceeds available balance"
+    }
+  },
+  "errors": {
+    "networkError": "Network error, please retry",
+    "serverError": "Server error",
+    "timeout": "Request timeout",
+    "unknownError": "Unknown error",
+    "loadFailed": "Load failed",
+    "operationFailed": "Operation failed"
+  }
+}
+

@@ -1,0 +1,78 @@
+[
+  {
+    "id": "task-1",
+    "title": "关注我们的 Twitter 账号",
+    "description": "请关注 @KOLNetwork 并确保您的关注是公开可见的。完成后请提供截图或您的 Twitter 用户名作为凭证。",
+    "types": ["follow"],
+    "reward": 0.5,
+    "totalQuantity": 100,
+    "completedQuantity": 45,
+    "publisher": "@ProjectX",
+    "publisherId": "user-publisher-1",
+    "publisherAvatar": "/users/jake-mor@2x.30505b7a.webp",
+    "status": "active",
+    "createdAt": "2025-10-15T10:00:00Z",
+    "expiresAt": "2025-10-25T23:59:59Z"
+  },
+  {
+    "id": "task-2",
+    "title": "完成所有社交媒体互动任务",
+    "description": "这是一个综合任务，需要完成关注、点赞、转发、评论和引用等所有互动。完成后可获得高额奖励。",
+    "types": ["follow", "like", "retweet", "comment", "quote"],
+    "reward": 2.5,
+    "totalQuantity": 50,
+    "completedQuantity": 30,
+    "publisher": "@CryptoProject",
+    "publisherId": "user-publisher-2",
+    "publisherAvatar": "/users/mark-johnson@2x.d988645b.webp",
+    "status": "active",
+    "createdAt": "2025-10-16T14:30:00Z",
+    "expiresAt": "2025-10-20T23:59:59Z"
+  },
+  {
+    "id": "task-3",
+    "title": "评论并引用我们的推文",
+    "description": "请在这条推文下评论您的想法，并引用转发: https://twitter.com/KOLNetwork/status/987654321",
+    "types": ["comment", "quote"],
+    "reward": 1.0,
+    "totalQuantity": 30,
+    "completedQuantity": 15,
+    "publisher": "@NFTProject",
+    "publisherId": "user-publisher-3",
+    "publisherAvatar": "/users/shahed-khan@2x.09ee0b4c.webp",
+    "status": "active",
+    "createdAt": "2025-10-17T09:15:00Z",
+    "expiresAt": "2025-10-30T23:59:59Z"
+  },
+  {
+    "id": "task-4",
+    "title": "关注并点赞我们的最新推文",
+    "description": "1. 关注 @Web3Project\n2. 点赞我们的置顶推文\n3. 提供截图证明",
+    "types": ["follow", "like"],
+    "reward": 0.6,
+    "totalQuantity": 80,
+    "completedQuantity": 60,
+    "publisher": "@Web3Project",
+    "publisherId": "user-publisher-4",
+    "publisherAvatar": "/users/josh@2x.9d9f1a6b.webp",
+    "status": "active",
+    "createdAt": "2025-10-17T16:45:00Z",
+    "expiresAt": "2025-10-22T23:59:59Z"
+  },
+  {
+    "id": "task-5",
+    "title": "转发并评论我们的活动推文",
+    "description": "参与我们的空投活动：\n1. 转发活动推文\n2. 评论 #KOLNetwork #Airdrop\n3. 提供推文链接",
+    "types": ["retweet", "comment"],
+    "reward": 1.2,
+    "totalQuantity": 200,
+    "completedQuantity": 120,
+    "publisher": "@AirdropProject",
+    "publisherId": "user-publisher-5",
+    "publisherAvatar": "/users/design-papa@2x.3e76d186.webp",
+    "status": "active",
+    "createdAt": "2025-10-18T08:00:00Z",
+    "expiresAt": "2025-10-28T23:59:59Z"
+  }
+]
+

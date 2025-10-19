@@ -1,0 +1,14 @@
+[
+  {
+    "id": "task-1",
+    "title": "关注我们的 Twitter 账号",
+    "description": "请关注 @KOLNetwork 并确保您的关注是公开可见的。",
+    "types": ["follow"],
+    "reward": 0.5,
+    "totalQuantity": 100,
+    "completedQuantity": 45,
+    "status": "active",
+    "createdAt": "2025-10-15T10:00:00Z"
+  }
+]
+

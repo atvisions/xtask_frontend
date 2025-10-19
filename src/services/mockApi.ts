@@ -6,6 +6,7 @@ import userData from '../../mock-data/user.json'
 import myClaimedTasksData from '../../mock-data/my-claimed-tasks.json'
 import myPublishedTasksData from '../../mock-data/my-published-tasks.json'
 import withdrawHistoryData from '../../mock-data/withdraw-history.json'
+import earningsHistoryData from '../../mock-data/earnings-history.json'
 
 // Simulate network delay
 const delay = (ms: number = 500) => new Promise(resolve => setTimeout(resolve, ms))
@@ -156,7 +157,38 @@ export const mockApi = {
     },
   },
 
-  // Withdraw APIs
+  // Profile APIs
+  profile: {
+    async getWithdrawHistory() {
+      await delay()
+      return {
+        success: true,
+        data: withdrawHistoryData,
+      }
+    },
+
+    async getEarningsHistory() {
+      await delay()
+      return {
+        success: true,
+        data: earningsHistoryData,
+      }
+    },
+
+    async withdraw(amount: number) {
+      await delay(1000)
+      return {
+        success: true,
+        data: {
+          withdrawId: 'withdraw-' + Date.now(),
+          txHash: '0x' + Math.random().toString(16).substring(2, 66),
+          message: 'Withdrawal successful',
+        },
+      }
+    },
+  },
+
+  // Withdraw APIs (deprecated - use profile.withdraw instead)
   withdraw: {
     async create(amount: number) {
       await delay(1000)

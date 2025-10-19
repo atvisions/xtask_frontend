@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import { useTranslation } from '@/hooks/useTranslation'
 import { Coins, Clock } from 'lucide-react'
 
@@ -90,9 +91,11 @@ export default function TaskCard({
   const expiryInfo = getExpiryInfo()
 
   return (
-    <div className="group relative overflow-hidden rounded-2xl bg-background border border-border/40 p-6 hover:border-border/60 hover:shadow-lg transition-all duration-300">
-      {/* Publisher Info */}
-      <div className="flex items-start gap-3 mb-3">
+    <div className="group relative overflow-hidden rounded-2xl bg-background border border-border/40 hover:border-border/60 hover:shadow-lg transition-all duration-300">
+      {/* Clickable Card Area */}
+      <Link href={`/task/${task.id}`} className="block p-6">
+        {/* Publisher Info */}
+        <div className="flex items-start gap-3 mb-3">
         <div className="w-10 h-10 rounded-full flex-shrink-0 overflow-hidden">
           {task.publisherAvatar ? (
             <img
@@ -163,18 +166,27 @@ export default function TaskCard({
         </div>
       </div>
 
-      {/* Reward and Action */}
-      <div className="flex items-center justify-between pt-4 border-t border-border/40">
-        <div className="flex items-center gap-2">
-          <Coins className="w-5 h-5 text-green-600" />
-          <span className="text-lg font-bold text-green-600">
-            {task.reward} USDT
-          </span>
+        {/* Reward and Action */}
+        <div className="flex items-center justify-between pt-4 border-t border-border/40">
+          <div className="flex items-center gap-2">
+            <Coins className="w-5 h-5 text-green-600" />
+            <span className="text-lg font-bold text-green-600">
+              {task.reward} USDT
+            </span>
+          </div>
         </div>
+      </Link>
+
+      {/* Claim Button - Outside Link to prevent nested interaction */}
+      <div className="px-6 pb-6">
         <button
-          onClick={onClaim}
+          onClick={(e) => {
+            e.preventDefault()
+            e.stopPropagation()
+            onClaim()
+          }}
           disabled={claimed || remaining === 0}
-          className={`px-4 py-2 rounded-full text-sm font-semibold transition-all ${
+          className={`w-full px-4 py-2 rounded-full text-sm font-semibold transition-all ${
             claimed || remaining === 0
               ? 'bg-muted text-muted-foreground cursor-not-allowed'
               : 'bg-primary text-primary-foreground hover:opacity-90'

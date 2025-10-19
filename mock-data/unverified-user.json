@@ -1,0 +1,10 @@
+{
+  "id": "user-unverified",
+  "twitterUsername": "@NewUser",
+  "twitterId": "987654321",
+  "walletAddress": "0x1234567890abcdef1234567890abcdef12345678",
+  "isVerified": false,
+  "balance": 0,
+  "createdAt": "2025-10-19T10:00:00Z"
+}
+

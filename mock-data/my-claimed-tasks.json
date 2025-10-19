@@ -3,7 +3,7 @@
     "id": "claimed-1",
     "taskId": "task-1",
     "task": {
-      "title": "关注我们的 Twitter 账号",
+      "title": "Follow our Twitter account",
       "types": ["follow"],
       "reward": 0.5
     },
@@ -19,7 +19,7 @@
     "id": "claimed-2",
     "taskId": "task-2",
     "task": {
-      "title": "点赞并转发我们的推文",
+      "title": "Like and retweet our tweet",
       "types": ["like", "retweet"],
       "reward": 0.8
     },
@@ -38,7 +38,7 @@
     "id": "claimed-3",
     "taskId": "task-3",
     "task": {
-      "title": "评论并引用我们的推文",
+      "title": "Comment and quote our tweet",
       "types": ["comment", "quote"],
       "reward": 1.0
     },
@@ -57,7 +57,7 @@
     "id": "claimed-4",
     "taskId": "task-4",
     "task": {
-      "title": "关注并点赞我们的最新推文",
+      "title": "Follow and like our latest tweet",
       "types": ["follow", "like"],
       "reward": 0.6
     },
@@ -69,13 +69,13 @@
     },
     "submittedAt": "2025-10-15T12:00:00Z",
     "completedAt": null,
-    "failureReason": "未完成任务要求"
+    "failureReason": "Task requirements not met"
   },
   {
     "id": "claimed-5",
     "taskId": "task-5",
     "task": {
-      "title": "转发并评论我们的活动推文",
+      "title": "Retweet and comment on our event tweet",
       "types": ["retweet", "comment"],
       "reward": 1.2
     },
@@ -85,7 +85,7 @@
     "proof": null,
     "submittedAt": null,
     "completedAt": null,
-    "failureReason": "超过 24 小时未提交"
+    "failureReason": "Not submitted within 24 hours"
   }
 ]
 

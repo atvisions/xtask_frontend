@@ -1,8 +1,8 @@
 [
   {
     "id": "task-1",
-    "title": "关注我们的 Twitter 账号",
-    "description": "请关注 @KOLNetwork 并确保您的关注是公开可见的。",
+    "title": "Follow our Twitter account",
+    "description": "Please follow @KOLNetwork and make sure your follow is publicly visible.",
     "types": ["follow"],
     "reward": 0.5,
     "totalQuantity": 100,

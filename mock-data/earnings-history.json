@@ -1,0 +1,57 @@
+[
+  {
+    "id": "earning-1",
+    "taskId": "task-1",
+    "taskTitle": "Follow and like our latest tweet",
+    "amount": 2.5,
+    "status": "paid",
+    "completedAt": "2025-10-18T14:30:00Z",
+    "paidAt": "2025-10-18T15:00:00Z"
+  },
+  {
+    "id": "earning-2",
+    "taskId": "task-2",
+    "taskTitle": "Retweet and comment on our product launch",
+    "amount": 5.0,
+    "status": "paid",
+    "completedAt": "2025-10-17T10:20:00Z",
+    "paidAt": "2025-10-17T11:00:00Z"
+  },
+  {
+    "id": "earning-3",
+    "taskId": "task-3",
+    "taskTitle": "Join our Discord community and introduce yourself",
+    "amount": 3.0,
+    "status": "pending",
+    "completedAt": "2025-10-19T08:15:00Z",
+    "paidAt": null
+  },
+  {
+    "id": "earning-4",
+    "taskId": "task-4",
+    "taskTitle": "Share your experience on Twitter",
+    "amount": 4.0,
+    "status": "paid",
+    "completedAt": "2025-10-16T16:45:00Z",
+    "paidAt": "2025-10-16T17:30:00Z"
+  },
+  {
+    "id": "earning-5",
+    "taskId": "task-5",
+    "taskTitle": "Follow our Twitter account",
+    "amount": 1.5,
+    "status": "paid",
+    "completedAt": "2025-10-15T09:00:00Z",
+    "paidAt": "2025-10-15T09:30:00Z"
+  },
+  {
+    "id": "earning-6",
+    "taskId": "task-6",
+    "taskTitle": "Participate in our AMA event",
+    "amount": 8.0,
+    "status": "reviewing",
+    "completedAt": "2025-10-19T12:00:00Z",
+    "paidAt": null
+  }
+]
+

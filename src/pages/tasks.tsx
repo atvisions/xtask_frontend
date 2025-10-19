@@ -68,7 +68,17 @@ export default function TasksPage() {
   const handleClaimTask = async (taskId: string) => {
     if (!isAuthenticated) {
       toast.error(t('auth.loginRequired'))
-      // TODO: Open login modal
+      router.push('/login')
+      return
+    }
+
+    // Check if user is verified
+    const { user } = useAuthStore.getState()
+    if (!user?.isVerified) {
+      toast.error(t('verify.verificationRequired'))
+      setTimeout(() => {
+        router.push('/verify')
+      }, 1500)
       return
     }
 
@@ -93,8 +103,7 @@ export default function TasksPage() {
       router.push('/login')
       return
     }
-    // TODO: Open publish task modal
-    alert('Open publish task modal')
+    router.push('/publish-task')
   }
 
   // Filter and sort tasks
@@ -266,8 +275,8 @@ export default function TasksPage() {
 
         {/* Loading State */}
         {loading && (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[1, 2, 3, 4, 5, 6].map((i) => (
               <TaskCardSkeleton key={i} />
             ))}
           </div>
@@ -284,7 +293,7 @@ export default function TasksPage() {
 
         {/* Task Grid */}
         {!loading && filteredTasks.length > 0 && (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredTasks.map((task) => (
               <TaskCard
                 key={task.id}

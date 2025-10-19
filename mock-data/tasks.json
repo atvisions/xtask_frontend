@@ -1,8 +1,8 @@
 [
   {
     "id": "task-1",
-    "title": "关注我们的 Twitter 账号",
-    "description": "请关注 @KOLNetwork 并确保您的关注是公开可见的。完成后请提供截图或您的 Twitter 用户名作为凭证。",
+    "title": "Follow our Twitter account",
+    "description": "Please follow @KOLNetwork and make sure your follow is publicly visible. After completion, please provide a screenshot or your Twitter username as proof.",
     "types": ["follow"],
     "reward": 0.5,
     "totalQuantity": 100,
@@ -16,8 +16,8 @@
   },
   {
     "id": "task-2",
-    "title": "完成所有社交媒体互动任务",
-    "description": "这是一个综合任务，需要完成关注、点赞、转发、评论和引用等所有互动。完成后可获得高额奖励。",
+    "title": "Complete all social media engagement tasks",
+    "description": "This is a comprehensive task that requires completing all interactions including follow, like, retweet, comment, and quote. High rewards upon completion.",
     "types": ["follow", "like", "retweet", "comment", "quote"],
     "reward": 2.5,
     "totalQuantity": 50,
@@ -31,8 +31,8 @@
   },
   {
     "id": "task-3",
-    "title": "评论并引用我们的推文",
-    "description": "请在这条推文下评论您的想法，并引用转发: https://twitter.com/KOLNetwork/status/987654321",
+    "title": "Comment and quote our tweet",
+    "description": "Please comment your thoughts on this tweet and quote retweet: https://twitter.com/KOLNetwork/status/987654321",
     "types": ["comment", "quote"],
     "reward": 1.0,
     "totalQuantity": 30,
@@ -46,8 +46,8 @@
   },
   {
     "id": "task-4",
-    "title": "关注并点赞我们的最新推文",
-    "description": "1. 关注 @Web3Project\n2. 点赞我们的置顶推文\n3. 提供截图证明",
+    "title": "Follow and like our latest tweet",
+    "description": "1. Follow @Web3Project\n2. Like our pinned tweet\n3. Provide screenshot proof",
     "types": ["follow", "like"],
     "reward": 0.6,
     "totalQuantity": 80,
@@ -61,8 +61,8 @@
   },
   {
     "id": "task-5",
-    "title": "转发并评论我们的活动推文",
-    "description": "参与我们的空投活动：\n1. 转发活动推文\n2. 评论 #KOLNetwork #Airdrop\n3. 提供推文链接",
+    "title": "Retweet and comment on our event tweet",
+    "description": "Join our airdrop event:\n1. Retweet the event tweet\n2. Comment with #KOLNetwork #Airdrop\n3. Provide tweet link",
     "types": ["retweet", "comment"],
     "reward": 1.2,
     "totalQuantity": 200,

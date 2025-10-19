@@ -4,7 +4,9 @@ import Image from 'next/image'
 import { useTranslation } from '@/hooks/useTranslation'
 import { useAuthStore } from '@/store/authStore'
 import mockApi from '@/services/mockApi'
-import { Twitter, ArrowRight } from 'lucide-react'
+import { Twitter, ArrowRight, TestTube } from 'lucide-react'
+import verifiedUserData from '../../mock-data/user.json'
+import unverifiedUserData from '../../mock-data/unverified-user.json'
 
 export default function LoginPage() {
   const router = useRouter()
@@ -20,7 +22,7 @@ export default function LoginPage() {
     try {
       // Step 1: Twitter OAuth (mock)
       const twitterResponse = await mockApi.auth.twitterLogin()
-      
+
       if (!twitterResponse.success) {
         throw new Error('Twitter login failed')
       }
@@ -43,7 +45,7 @@ export default function LoginPage() {
 
       // Login successful
       login(verifyResponse.data.user, verifyResponse.data.token)
-      
+
       // Redirect to tasks page
       router.push('/tasks')
     } catch (err: any) {
@@ -51,6 +53,17 @@ export default function LoginPage() {
     } finally {
       setLoading(false)
     }
+  }
+
+  // Test login functions
+  const handleTestLoginVerified = () => {
+    login(verifiedUserData, 'mock-token-verified')
+    router.push('/tasks')
+  }
+
+  const handleTestLoginUnverified = () => {
+    login(unverifiedUserData, 'mock-token-unverified')
+    router.push('/verify')
   }
 
   return (
@@ -116,6 +129,28 @@ export default function LoginPage() {
             </span>
             <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
           </button>
+
+          {/* Test Login Buttons (Development Only) */}
+          <div className="mt-6 pt-6 border-t border-border/40">
+            <div className="flex items-center gap-2 mb-3">
+              <TestTube className="w-4 h-4 text-muted-foreground" />
+              <span className="text-xs text-muted-foreground font-medium">Test Login (Dev Only)</span>
+            </div>
+            <div className="grid grid-cols-2 gap-3">
+              <button
+                onClick={handleTestLoginVerified}
+                className="px-4 py-2 text-xs font-medium bg-green-100 text-green-700 rounded-lg hover:bg-green-200 transition-colors"
+              >
+                ✓ Verified User
+              </button>
+              <button
+                onClick={handleTestLoginUnverified}
+                className="px-4 py-2 text-xs font-medium bg-orange-100 text-orange-700 rounded-lg hover:bg-orange-200 transition-colors"
+              >
+                ⚠ Unverified User
+              </button>
+            </div>
+          </div>
 
           {/* Info Text */}
           <div className="mt-8 text-xs text-center text-muted-foreground leading-relaxed">

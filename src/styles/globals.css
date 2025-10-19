@@ -53,13 +53,22 @@
   * {
     @apply border-border;
   }
-  body {
-    @apply bg-background text-foreground;
-  }
 
-  /* Prevent layout shift on page load */
+  /* Prevent layout shift on page load and when scrollbar appears/disappears */
   html {
     overflow-y: scroll;
+    scrollbar-gutter: stable;
+  }
+
+  /* Prevent body scroll lock from causing layout shift */
+  body {
+    @apply bg-background text-foreground;
+    scrollbar-gutter: stable;
+  }
+
+  /* Prevent layout shift when body scroll is locked by modals/dropdowns */
+  body[data-scroll-locked] {
+    padding-right: 0 !important;
   }
 
   /* Optimize rendering performance */

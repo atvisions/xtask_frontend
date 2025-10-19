@@ -186,6 +186,20 @@ export const mockApi = {
         },
       }
     },
+
+    async refreshTwitterData() {
+      await delay(1500)
+      // Simulate fetching fresh data from Twitter API
+      const mockData = {
+        followersCount: Math.floor(Math.random() * 50000) + 100,
+        followingCount: Math.floor(Math.random() * 2000) + 50,
+        tweetsCount: Math.floor(Math.random() * 10000) + 100,
+      }
+      return {
+        success: true,
+        data: mockData,
+      }
+    },
   },
 
   // Withdraw APIs (deprecated - use profile.withdraw instead)

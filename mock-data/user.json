@@ -2,9 +2,22 @@
   "id": "user-1",
   "twitterUsername": "@JohnDoe",
   "twitterId": "123456789",
+  "avatar": "/users/jake-mor@2x.30505b7a.webp",
   "walletAddress": "0x742d35Cc6634C0532925a3b844Bc9e7595f9C4f",
+  "walletConnectedAt": "2025-10-10T12:30:00Z",
   "isVerified": true,
+  "verificationPaidAt": "2025-10-10T13:00:00Z",
+  "verificationTxHash": "0xabcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567890",
   "balance": 12.5,
-  "createdAt": "2025-10-10T12:00:00Z"
+  "totalEarned": 25.5,
+  "tasksCompleted": 42,
+  "tasksPublished": 5,
+  "successRate": 95.2,
+  "createdAt": "2025-10-10T12:00:00Z",
+  "twitterCreatedAt": "2020-03-15T08:30:00Z",
+  "followersCount": 15420,
+  "followingCount": 892,
+  "tweetsCount": 3567,
+  "twitterDataUpdatedAt": "2025-10-19T10:30:00Z"
 }
 

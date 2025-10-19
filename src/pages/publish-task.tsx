@@ -4,13 +4,28 @@ import Layout from '@/components/Layout'
 import { useTranslation } from '@/hooks/useTranslation'
 import { useAuthStore } from '@/store/authStore'
 import mockApi from '@/services/mockApi'
-import { AlertCircle, DollarSign, Hash, FileText, CheckSquare, ArrowRight, Loader2 } from 'lucide-react'
+import {
+  AlertCircle,
+  DollarSign,
+  Hash,
+  FileText,
+  CheckSquare,
+  ArrowRight,
+  Loader2,
+  Link as LinkIcon,
+  UserPlus,
+  Heart,
+  Repeat2,
+  MessageCircle,
+  Quote
+} from 'lucide-react'
 import toast from 'react-hot-toast'
 
 interface TaskFormData {
   title: string
   description: string
-  types: string[]
+  type: string  // Changed from types[] to type (single selection)
+  targetUrl: string  // New field for target URL
   reward: string
   quantity: string
 }
@@ -23,7 +38,8 @@ export default function PublishTaskPage() {
   const [formData, setFormData] = useState<TaskFormData>({
     title: '',
     description: '',
-    types: [],
+    type: '',  // Changed from types[] to type
+    targetUrl: '',  // New field
     reward: '',
     quantity: '',
   })
@@ -39,15 +55,58 @@ export default function PublishTaskPage() {
     }
   }, [isAuthenticated, router])
 
+  const getTaskTypeIcon = (value: string) => {
+    const iconClass = "w-5 h-5"
+    switch (value) {
+      case 'follow':
+        return <UserPlus className={iconClass} />
+      case 'like':
+        return <Heart className={iconClass} />
+      case 'retweet':
+        return <Repeat2 className={iconClass} />
+      case 'comment':
+        return <MessageCircle className={iconClass} />
+      case 'quote':
+        return <Quote className={iconClass} />
+      default:
+        return null
+    }
+  }
+
   const taskTypes = [
-    { value: 'follow', label: t('tasks.taskTypes.follow'), icon: '👤' },
-    { value: 'like', label: t('tasks.taskTypes.like'), icon: '❤️' },
-    { value: 'retweet', label: t('tasks.taskTypes.retweet'), icon: '🔄' },
-    { value: 'comment', label: t('tasks.taskTypes.comment'), icon: '💬' },
-    { value: 'quote', label: t('tasks.taskTypes.quote'), icon: '📝' },
+    {
+      value: 'follow',
+      label: t('tasks.taskTypes.follow'),
+      placeholder: 'https://twitter.com/username',
+      urlLabel: t('publishTask.targetAccount')
+    },
+    {
+      value: 'like',
+      label: t('tasks.taskTypes.like'),
+      placeholder: 'https://twitter.com/username/status/123456789',
+      urlLabel: t('publishTask.targetTweet')
+    },
+    {
+      value: 'retweet',
+      label: t('tasks.taskTypes.retweet'),
+      placeholder: 'https://twitter.com/username/status/123456789',
+      urlLabel: t('publishTask.targetTweet')
+    },
+    {
+      value: 'comment',
+      label: t('tasks.taskTypes.comment'),
+      placeholder: 'https://twitter.com/username/status/123456789',
+      urlLabel: t('publishTask.targetTweet')
+    },
+    {
+      value: 'quote',
+      label: t('tasks.taskTypes.quote'),
+      placeholder: 'https://twitter.com/username/status/123456789',
+      urlLabel: t('publishTask.targetTweet')
+    },
   ]
 
-  const handleInputChange = (field: keyof TaskFormData, value: string | string[]) => {
+  const handleInputChange = (field: keyof TaskFormData, value: string) => {
     setFormData((prev) => ({ ...prev, [field]: value }))
     // Clear error when user starts typing
     if (errors[field]) {
@@ -55,11 +114,16 @@ export default function PublishTaskPage() {
     }
   }
 
-  const handleTypeToggle = (type: string) => {
-    const newTypes = formData.types.includes(type)
-      ? formData.types.filter((t) => t !== type)
-      : [...formData.types, type]
-    handleInputChange('types', newTypes)
+  const handleTypeSelect = (type: string) => {
+    handleInputChange('type', type)
+    // Clear targetUrl when changing type
+    if (formData.type !== type) {
+      handleInputChange('targetUrl', '')
+    }
+  }
+
+  const getSelectedTypeInfo = () => {
+    return taskTypes.find(t => t.value === formData.type)
   }
 
   const validateForm = (): boolean => {
@@ -75,8 +139,14 @@ export default function PublishTaskPage() {
       newErrors.description = t('publishTask.validation.descriptionRequired')
     }
 
-    if (formData.types.length === 0) {
-      newErrors.types = t('publishTask.validation.typeRequired')
+    if (!formData.type) {
+      newErrors.type = t('publishTask.validation.typeRequired')
+    }
+
+    if (!formData.targetUrl.trim()) {
+      newErrors.targetUrl = t('publishTask.validation.targetUrlRequired')
+    } else if (!formData.targetUrl.startsWith('https://twitter.com/') && !formData.targetUrl.startsWith('https://x.com/')) {
+      newErrors.targetUrl = t('publishTask.validation.targetUrlInvalid')
     }
 
     const rewardNum = parseFloat(formData.reward)
@@ -223,36 +293,67 @@ export default function PublishTaskPage() {
             )}
           </div>
 
-          {/* Task Types */}
+          {/* Task Type - Single Selection */}
           <div className="bg-background border border-border/40 rounded-xl p-6 space-y-4">
             <div className="flex items-center gap-2 text-foreground font-semibold">
               <CheckSquare className="w-5 h-5 text-primary" />
-              {t('publishTask.taskTypes')}
+              {t('publishTask.taskType')}
             </div>
             <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
               {taskTypes.map((type) => (
                 <button
                   key={type.value}
                   type="button"
-                  onClick={() => handleTypeToggle(type.value)}
-                  className={`flex flex-col items-center gap-2 p-4 rounded-lg border-2 transition-all ${
-                    formData.types.includes(type.value)
+                  onClick={() => handleTypeSelect(type.value)}
+                  className={`flex flex-col items-center gap-3 p-4 rounded-lg border-2 transition-all ${
+                    formData.type === type.value
                       ? 'border-primary bg-primary/5 text-foreground'
                       : 'border-border/40 text-muted-foreground hover:border-border/60'
                   }`}
                 >
-                  <span className="text-2xl">{type.icon}</span>
+                  {getTaskTypeIcon(type.value)}
                   <span className="text-sm font-medium">{type.label}</span>
                 </button>
               ))}
             </div>
-            {errors.types && (
+            {errors.type && (
               <p className="text-sm text-destructive flex items-center gap-1">
                 <AlertCircle className="w-4 h-4" />
-                {errors.types}
+                {errors.type}
               </p>
             )}
           </div>
+
+          {/* Target URL - Only show when type is selected */}
+          {formData.type && (
+            <div className="bg-background border border-border/40 rounded-xl p-6 space-y-4">
+              <div className="flex items-center gap-2 text-foreground font-semibold">
+                <LinkIcon className="w-5 h-5 text-primary" />
+                {getSelectedTypeInfo()?.urlLabel || t('publishTask.targetUrl')}
+              </div>
+              <input
+                type="url"
+                value={formData.targetUrl}
+                onChange={(e) => handleInputChange('targetUrl', e.target.value)}
+                placeholder={getSelectedTypeInfo()?.placeholder || 'https://twitter.com/...'}
+                className={`w-full px-4 py-3 text-sm bg-background border rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all ${
+                  errors.targetUrl ? 'border-destructive' : 'border-border/40'
+                }`}
+              />
+              {errors.targetUrl && (
+                <p className="text-sm text-destructive flex items-center gap-1">
+                  <AlertCircle className="w-4 h-4" />
+                  {errors.targetUrl}
+                </p>
+              )}
+              <p className="text-xs text-muted-foreground">
+                {formData.type === 'follow'
+                  ? t('publishTask.targetUrlHintFollow')
+                  : t('publishTask.targetUrlHint')
+                }
+              </p>
+            </div>
+          )}
 
           {/* Reward and Quantity */}
           <div className="grid md:grid-cols-2 gap-6">

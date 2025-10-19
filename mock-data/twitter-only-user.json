@@ -1,0 +1,23 @@
+{
+  "id": "user-twitter-only",
+  "twitterUsername": "@TwitterOnlyUser",
+  "twitterId": "555666777",
+  "avatar": "/users/shahed-khan@2x.09ee0b4c.webp",
+  "walletAddress": null,
+  "walletConnectedAt": null,
+  "isVerified": false,
+  "verificationPaidAt": null,
+  "verificationTxHash": null,
+  "balance": 0,
+  "totalEarned": 0,
+  "tasksCompleted": 0,
+  "tasksPublished": 0,
+  "successRate": 0,
+  "createdAt": "2025-10-19T14:00:00Z",
+  "twitterCreatedAt": "2023-01-10T09:20:00Z",
+  "followersCount": 128,
+  "followingCount": 456,
+  "tweetsCount": 234,
+  "twitterDataUpdatedAt": "2025-10-19T14:00:00Z"
+}
+

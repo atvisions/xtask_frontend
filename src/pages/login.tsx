@@ -7,6 +7,7 @@ import mockApi from '@/services/mockApi'
 import { Twitter, ArrowRight, TestTube } from 'lucide-react'
 import verifiedUserData from '../../mock-data/user.json'
 import unverifiedUserData from '../../mock-data/unverified-user.json'
+import twitterOnlyUserData from '../../mock-data/twitter-only-user.json'
 
 export default function LoginPage() {
   const router = useRouter()
@@ -57,12 +58,17 @@ export default function LoginPage() {
 
   // Test login functions
   const handleTestLoginVerified = () => {
-    login(verifiedUserData, 'mock-token-verified')
+    login(verifiedUserData as any, 'mock-token-verified')
     router.push('/tasks')
   }
 
   const handleTestLoginUnverified = () => {
-    login(unverifiedUserData, 'mock-token-unverified')
+    login(unverifiedUserData as any, 'mock-token-unverified')
+    router.push('/verify')
+  }
+
+  const handleTestLoginTwitterOnly = () => {
+    login(twitterOnlyUserData as any, 'mock-token-twitter-only')
     router.push('/verify')
   }
 
@@ -136,18 +142,24 @@ export default function LoginPage() {
               <TestTube className="w-4 h-4 text-muted-foreground" />
               <span className="text-xs text-muted-foreground font-medium">Test Login (Dev Only)</span>
             </div>
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-3 gap-2">
               <button
                 onClick={handleTestLoginVerified}
-                className="px-4 py-2 text-xs font-medium bg-green-100 text-green-700 rounded-lg hover:bg-green-200 transition-colors"
+                className="px-3 py-2 text-xs font-medium bg-green-100 text-green-700 rounded-lg hover:bg-green-200 transition-colors"
               >
-                ✓ Verified User
+                ✓ Verified
               </button>
               <button
                 onClick={handleTestLoginUnverified}
-                className="px-4 py-2 text-xs font-medium bg-orange-100 text-orange-700 rounded-lg hover:bg-orange-200 transition-colors"
+                className="px-3 py-2 text-xs font-medium bg-orange-100 text-orange-700 rounded-lg hover:bg-orange-200 transition-colors"
               >
-                ⚠ Unverified User
+                ⚠ Has Wallet
+              </button>
+              <button
+                onClick={handleTestLoginTwitterOnly}
+                className="px-3 py-2 text-xs font-medium bg-blue-100 text-blue-700 rounded-lg hover:bg-blue-200 transition-colors"
+              >
+                🐦 Twitter Only
               </button>
             </div>
           </div>

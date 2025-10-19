@@ -2,9 +2,22 @@
   "id": "user-unverified",
   "twitterUsername": "@NewUser",
   "twitterId": "987654321",
+  "avatar": "/users/mark-johnson@2x.d988645b.webp",
   "walletAddress": "0x1234567890abcdef1234567890abcdef12345678",
+  "walletConnectedAt": "2025-10-19T10:30:00Z",
   "isVerified": false,
+  "verificationPaidAt": null,
+  "verificationTxHash": null,
   "balance": 0,
-  "createdAt": "2025-10-19T10:00:00Z"
+  "totalEarned": 0,
+  "tasksCompleted": 0,
+  "tasksPublished": 0,
+  "successRate": 0,
+  "createdAt": "2025-10-19T10:00:00Z",
+  "twitterCreatedAt": "2022-06-20T15:45:00Z",
+  "followersCount": 523,
+  "followingCount": 1205,
+  "tweetsCount": 847,
+  "twitterDataUpdatedAt": "2025-10-19T10:30:00Z"
 }
 

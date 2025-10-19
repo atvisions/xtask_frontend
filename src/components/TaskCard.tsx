@@ -92,10 +92,19 @@ export default function TaskCard({
 
   return (
     <div className="group relative overflow-hidden rounded-2xl bg-background border border-border/40 hover:border-border/60 hover:shadow-lg transition-all duration-300">
+      {/* Task Type Badge - Top Right Corner */}
+      {task.types.length > 0 && (
+        <div className="absolute top-4 right-4 z-10">
+          <span className="px-2.5 py-1 text-xs font-medium bg-muted/80 backdrop-blur-sm text-muted-foreground rounded-full border border-border/40">
+            {getTypeLabel(task.types[0])}
+          </span>
+        </div>
+      )}
+
       {/* Clickable Card Area */}
       <Link href={`/task/${task.id}`} className="block p-6">
         {/* Publisher Info */}
-        <div className="flex items-start gap-3 mb-3">
+        <div className="flex items-start gap-3 mb-3 pr-16">
         <div className="w-10 h-10 rounded-full flex-shrink-0 overflow-hidden">
           {task.publisherAvatar ? (
             <img
@@ -122,36 +131,8 @@ export default function TaskCard({
         {task.description}
       </p>
 
-      {/* Task Types and Expiry */}
-      <div className="flex items-start justify-between gap-3 mb-4">
-        {/* Task Types */}
-        <div className="flex flex-wrap gap-1.5 flex-1 min-w-0">
-          {task.types.slice(0, 2).map((type) => (
-            <span
-              key={type}
-              className="px-2.5 py-1 text-xs font-medium bg-muted/50 text-muted-foreground rounded-full"
-            >
-              {getTypeLabel(type)}
-            </span>
-          ))}
-          {task.types.length > 2 && (
-            <span className="px-2.5 py-1 text-xs font-medium bg-muted/50 text-muted-foreground rounded-full">
-              +{task.types.length - 2}
-            </span>
-          )}
-        </div>
-
-        {/* Expiry Time */}
-        {expiryInfo && (
-          <div className={`flex items-center gap-1 text-xs font-medium ${expiryInfo.color} flex-shrink-0 whitespace-nowrap`}>
-            <Clock className="w-3.5 h-3.5" />
-            <span>{expiryInfo.text}</span>
-          </div>
-        )}
-      </div>
-
       {/* Progress */}
-      <div className="mb-4">
+      <div className="mb-4 pt-4 border-t border-border/40">
         <div className="flex items-center justify-between text-xs text-muted-foreground mb-2">
           <span>{t('tasks.progress')}</span>
           <span className="font-medium">
@@ -166,7 +147,7 @@ export default function TaskCard({
         </div>
       </div>
 
-        {/* Reward and Action */}
+        {/* Reward and Expiry Time */}
         <div className="flex items-center justify-between pt-4 border-t border-border/40">
           <div className="flex items-center gap-2">
             <Coins className="w-5 h-5 text-green-600" />
@@ -174,6 +155,14 @@ export default function TaskCard({
               {task.reward} USDT
             </span>
           </div>
+
+          {/* Expiry Time */}
+          {expiryInfo && (
+            <div className={`flex items-center gap-1 text-xs font-medium ${expiryInfo.color} flex-shrink-0 whitespace-nowrap`}>
+              <Clock className="w-3.5 h-3.5" />
+              <span>{expiryInfo.text}</span>
+            </div>
+          )}
         </div>
       </Link>
 
